@@ -39,10 +39,11 @@ Install dependencies:
 
 2. Install dependencies:
 
-
+```bash
 npm install
 # or
 yarn install
+
 
 3. Add environment variables:
 Create a .env.local file in the root:
