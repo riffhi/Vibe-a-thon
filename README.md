@@ -30,14 +30,16 @@ It fetches top deals, emails them to the user, and logs them to a Google Sheet.
 
 1. Clone the repo:
 
-```bash
+
 git clone https://github.com/riffhi/Vibe-a-thon.git
 cd Vibe-a-thon
 Install dependencies:
 
+
+
 2. Install dependencies:
 
-```bash
+
 npm install
 # or
 yarn install
