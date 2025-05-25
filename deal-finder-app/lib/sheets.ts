@@ -2,7 +2,11 @@ import { google } from "googleapis";
 import { promises as fs } from "fs";
 
 export async function logToGoogleSheets(deals: any[]) {
-  const credentials = JSON.parse(await fs.readFile(process.env.GOOGLE_CREDENTIALS!, "utf-8"));
+  if (!process.env.GOOGLE_CREDENTIALS || !process.env.SHEET_ID) {
+    throw new Error("Missing Google Sheets environment variables.");
+  }
+
+  const credentials = JSON.parse(await fs.readFile(process.env.GOOGLE_CREDENTIALS, "utf-8"));
 
   const auth = new google.auth.GoogleAuth({
     credentials,
