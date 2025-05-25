@@ -41,3 +41,18 @@ Install dependencies:
 npm install
 # or
 yarn install
+
+3. Add environment variables:
+Create a .env.local file in the root:
+
+GMAIL_USER=your.email@gmail.com
+GMAIL_PASS=your-app-password
+USER_EMAIL=recipient.email@example.com
+GOOGLE_CREDENTIALS=./path-to-your-google-service-account.json
+SHEET_ID=your-google-sheet-id
+
+Running the App
+npm run dev
+# or
+yarn dev
+
